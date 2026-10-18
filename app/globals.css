@@ -39,3 +39,5 @@
 }
 @keyframes introExitLong{from{opacity:1;visibility:visible}to{opacity:0;visibility:hidden;pointer-events:none}}
 @media(prefers-reduced-motion:reduce){.intro-logo{animation:none!important}.intro-overlay{animation:introExitLong .4s linear 5.25s forwards!important}}
+
+.contact-form{display:grid;gap:15px;margin-top:20px}.contact-form label{display:grid;gap:7px;font-weight:800;color:var(--text)}.contact-form input,.contact-form textarea{width:100%;padding:13px;border-radius:12px;border:1px solid #b9c7db;background:#fff;font:inherit;color:var(--text)}.contact-form input:focus,.contact-form textarea:focus{outline:3px solid #9abbe3;outline-offset:1px}.contact-form .form-note{color:var(--muted);font-size:.86rem;margin:0;line-height:1.55}.contact-submit{cursor:pointer;border:0;font:inherit;font-weight:850;padding:16px 20px;border-radius:14px;box-shadow:0 5px 0 #102842;max-width:100%;text-align:center}.contact-submit:active{transform:translateY(4px);box-shadow:0 1px 0 #102842}.empty-state .inline-action,.content-panel .inline-action{display:inline-flex;margin-top:18px}
