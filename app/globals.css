@@ -41,3 +41,21 @@
 @media(prefers-reduced-motion:reduce){.intro-logo{animation:none!important}.intro-overlay{animation:introExitLong .4s linear 5.25s forwards!important}}
 
 .contact-form{display:grid;gap:15px;margin-top:20px}.contact-form label{display:grid;gap:7px;font-weight:800;color:var(--text)}.contact-form input,.contact-form textarea{width:100%;padding:13px;border-radius:12px;border:1px solid #b9c7db;background:#fff;font:inherit;color:var(--text)}.contact-form input:focus,.contact-form textarea:focus{outline:3px solid #9abbe3;outline-offset:1px}.contact-form .form-note{color:var(--muted);font-size:.86rem;margin:0;line-height:1.55}.contact-submit{cursor:pointer;border:0;font:inherit;font-weight:850;padding:16px 20px;border-radius:14px;box-shadow:0 5px 0 #102842;max-width:100%;text-align:center}.contact-submit:active{transform:translateY(4px);box-shadow:0 1px 0 #102842}.empty-state .inline-action,.content-panel .inline-action{display:inline-flex;margin-top:18px}
+
+/* Diseño compacto aprobado: tarjetas en cuadrícula, también en teléfonos */
+@media(max-width:650px){
+ .site-header{padding:12px 14px;gap:8px}
+ .site-header nav{display:flex;justify-content:space-between;gap:8px;overflow:visible;font-size:.83rem}
+ .section{padding:36px 15px}
+ .section-heading h2,.content-section>h2{font-size:clamp(1.65rem,5.6vw,2.35rem)}
+ .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+ .quick-card{min-width:0;min-height:158px;padding:17px 13px;border-radius:19px;gap:9px}
+ .quick-card strong{font-size:.95rem;line-height:1.25}
+ .quick-card>span:nth-last-child(2){font-size:.79rem;line-height:1.3}
+ .quick-arrow{top:15px;right:13px}
+ .quick-icon{width:39px;height:39px;font-size:1.05rem}
+ .actions{flex-direction:row;gap:10px}
+ .actions .primary,.actions .secondary{width:auto;flex:1;min-width:0;padding:14px 13px;font-size:.86rem}
+ .hero{padding:51px 18px 60px}
+}
+@media(min-width:520px) and (max-width:850px){.quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
