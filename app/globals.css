@@ -77,3 +77,28 @@
 .participa-check{display:flex;align-items:flex-start;gap:11px;font-weight:600;line-height:1.45}.participa-check input{width:22px;height:22px;flex:none;accent-color:#204f88;margin:1px}
 .participa-disclaimer{font-size:.85rem;color:#546780;line-height:1.5;margin:2px 0}.participa-submit{width:100%;box-shadow:0 5px 0 #7493b8}
 @media(max-width:550px){.participa-hero{padding:42px 18px}.participa-share button,.participa-share a{width:100%;text-align:center;justify-content:center}}
+
+/* Corrección móvil: formulario Participa contenido dentro del ancho de pantalla */
+.participa-page,.participa-page *{box-sizing:border-box}
+.participa-page{width:100%;max-width:100%;overflow-x:hidden}
+.participa-top{padding:16px 5%;background:#091d3a}
+.participa-top a{color:#fff}
+.participa-hero{padding:45px 18px;background:linear-gradient(135deg,#06152e,#1d4c80 57%,#10284d);color:#fff;text-align:center}
+.participa-hero>span{color:#e9c99d;font-size:.8rem;font-weight:850;letter-spacing:.1em}
+.participa-hero h1{font-size:clamp(2rem,8vw,3.6rem);line-height:1.12;margin:17px 0}
+.participa-hero p{max-width:640px;margin:0 auto 23px;color:#ecf2fa;line-height:1.55}
+.participa-share{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.participa-share button,.participa-share a{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;background:linear-gradient(#fff,#d5e4f5);color:#153758;padding:13px 17px;border:1px solid #bed1e7;font-weight:800;box-shadow:0 4px 0 #092444;font:inherit;cursor:pointer;text-align:center}
+.participa-content{max-width:780px;width:100%;margin:0 auto;padding:32px 16px 60px}
+.participa-content h2{font-size:clamp(1.65rem,6vw,2.2rem);margin:0 0 12px}
+.participa-content>p{line-height:1.6}
+.participa-form{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;width:100%;min-width:0;background:#fff;border:1px solid #d5e0ed;border-radius:20px;padding:clamp(16px,4vw,30px);box-shadow:0 8px 25px #17365e16}
+.participa-form>label:not(.participa-check){display:flex;flex-direction:column;align-items:stretch;gap:7px;min-width:0;width:100%;font-weight:750}
+.participa-form input:not([type="checkbox"]),.participa-form textarea{display:block;width:100%;max-width:100%;min-width:0;border:1px solid #adbed4;border-radius:11px;padding:13px;font:inherit;background:#fff;color:#182d49}
+.participa-form textarea{resize:vertical}
+.participa-check{display:flex;align-items:flex-start;gap:11px;width:100%;min-width:0;line-height:1.45}
+.participa-check input[type="checkbox"]{flex:0 0 22px;width:22px;height:22px;margin:2px 0 0}
+.participa-check span{flex:1;min-width:0}
+.participa-disclaimer{font-size:.85rem;line-height:1.55;color:#51627a;margin:0}
+.participa-submit{width:100%;max-width:100%;padding:15px 12px;border-radius:13px;white-space:normal}
+@media(max-width:550px){.participa-share button,.participa-share a{width:100%}.participa-content{padding:30px 14px 55px}.participa-form{padding:17px 15px}}
