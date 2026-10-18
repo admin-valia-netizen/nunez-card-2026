@@ -1,12 +1,14 @@
 const programAreas = [
-  "Defensa del ejercicio profesional",
-  "Servicios al colegiado",
-  "Modernización digital",
-  "Transparencia institucional",
-  "Formación y actualización profesional",
-  "Abogado joven",
-  "Seccionales y presencia nacional",
-  "Participación permanente del gremio",
+  {title:"Transparencia y rendición de cuentas", description:"Auditoría financiera y patrimonial de los últimos diez años, publicación periódica de información institucional y controles de gestión."},
+  {title:"Defensa y dignidad del abogado", description:"Atención a reclamaciones, observatorio del ejercicio profesional y estudio de la figura del Defensor del Abogado."},
+  {title:"Seguridad social, salud y bienestar", description:"Fondo de solidaridad, asistencia sanitaria y estudio de una pensión solidaria para colegiados retirados sin recursos suficientes."},
+  {title:"Modernización tecnológica nacional", description:"Sede electrónica, carné digital, expediente del colegiado, trámites, pagos y servicios seguros para todo el país."},
+  {title:"Formación y capacitación profesional", description:"Instituto de actualización jurídica, escuela virtual, becas, formación práctica y red nacional de mentoría."},
+  {title:"Oportunidades laborales", description:"Bolsa nacional de empleo, apoyo a despachos independientes y directorio de profesionales y servicios jurídicos."},
+  {title:"Fortalecimiento de las seccionales", description:"Descentralización de los servicios, participación territorial y distribución transparente de recursos."},
+  {title:"Apoyo a los abogados jóvenes", description:"Primer empleo jurídico, mentoría, capacitación, becas y apoyo para iniciar el ejercicio profesional."},
+  {title:"Asistencia jurídica y compromiso social", description:"Orientación legal para población vulnerable, jornadas nacionales y programas de asistencia jurídica con criterios transparentes."},
+  {title:"Participación gremial y comunicación directa", description:"Núñez te Escucha, consultas a los colegiados, seguimiento de solicitudes y rendición periódica de resultados."},
 ];
 
 export default function Home() {
@@ -67,14 +69,14 @@ export default function Home() {
 
       <section className="section content-section" id="programa">
         <div className="section-kicker">PROGRAMA 2026–2029</div>
-        <h2>Propuestas organizadas para una consulta rápida.</h2>
-        <p className="section-copy">La plataforma queda preparada para publicar el programa oficial por áreas, sin obligar al abogado a descargar un documento extenso.</p>
+        <h2>Diez ejes para el desarrollo institucional del CARD.</h2>
+        <p className="section-copy">Versión de trabajo de alcance nacional. Estas propuestas requieren validación definitiva por el candidato y el equipo responsable antes de convertirse en compromisos oficiales.</p>
         <div className="program-grid">
           {programAreas.map((area, index) => (
-            <article className="program-card" key={area}>
+            <article className="program-card" key={area.title}>
               <span>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{area}</h3>
-              <p>Contenido oficial pendiente de incorporación.</p>
+              <h3>{area.title}</h3>
+              <p>{area.description}</p>
             </article>
           ))}
         </div>
@@ -136,7 +138,7 @@ export default function Home() {
       <section className="section compact">
         <div className="notice">
           <strong>Versión inicial funcional.</strong>
-          <p>La estructura, navegación y módulos principales ya están definidos. El logotipo, programa, biografía y demás contenidos oficiales se incorporarán únicamente cuando sean entregados o confirmados.</p>
+          <p>La estructura y la navegación ya están definidas. El programa se presenta como borrador de trabajo. La biografía, el logotipo y los contenidos oficiales se publicarán una vez confirmados.</p>
         </div>
       </section>
 
