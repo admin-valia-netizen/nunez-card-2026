@@ -21,8 +21,14 @@ const shortcuts = [
   ["Participa","Colabora e infórmate","#participa"]
 ];
 export default function Home() {
- return <main>
+ const [showIntro,setShowIntro] = useState(true);
+ const [introCycle,setIntroCycle] = useState(0);
+ useEffect(() => { const t=window.setTimeout(()=>setShowIntro(false),4400); return ()=>window.clearTimeout(t); },[introCycle]);
+ const replayIntro = () => {setShowIntro(true);setIntroCycle(x=>x+1);};
+ return <><main>
+ {showIntro && <div key={introCycle} className="intro-overlay" role="dialog" aria-label="Presentación del Movimiento Gremial CARD 2026"><img className="intro-logo" src="/emblema-card-3d.webp" alt="Movimiento Gremial CARD 2026 - Integridad Jurídica"/><span className="intro-label">MOVIMIENTO GREMIAL CARD 2026</span><button className="intro-skip" type="button" onClick={()=>setShowIntro(false)}>Omitir presentación</button></div>}
  <header className="site-header"><a className="brand" href="#inicio"><img className="header-3d-img" src="/emblema-card-3d.webp" alt="Emblema Movimiento Gremial CARD 2026" /><span>NÚÑEZ <b>CARD 2026</b></span></a><nav aria-label="Navegación principal"><a href="#programa">Programa</a><a href="#escucha">Te escucha</a><a href="#agenda">Agenda</a><a href="#noticias">Noticias</a></nav></header>
+ <button className="replay-intro" type="button" onClick={replayIntro}>▶ Ver presentación del logo 3D</button>
  <section className="hero" id="inicio"><div className="hero-inner"><div className="topline">COLEGIO DE ABOGADOS DE LA REPÚBLICA DOMINICANA</div><p className="eyebrow">Candidatura a la Presidencia · Período 2026–2029</p><h1>Dr. Francisco<br/><em>Núñez Cáceres</em></h1><p className="term">Programa de desarrollo institucional de alcance nacional</p><p className="motto">TRANSPARENCIA · MORALIDAD · JUSTICIA</p><div className="actions"><a href="#programa" className="primary">Explorar el programa <span aria-hidden="true">↗</span></a><a href="#escucha" className="secondary">Núñez te escucha <span aria-hidden="true">→</span></a></div></div></section>
  <section className="section intro"><div className="section-heading"><span>PLATAFORMA DIGITAL</span><h2>Un espacio para conocer las propuestas y participar.</h2></div><div className="quick-grid">{shortcuts.map(([title,detail,href],i)=><a className="quick-card relief" href={href} key={title}><span className="quick-icon">{["◆","▤","◉","◷","✦","✓"][i]}</span><strong>{title}</strong><span>{detail}</span><span className="quick-arrow">↗</span></a>)}</div></section>
  <section className="section content-section" id="perfil"><div className="section-kicker">CANDIDATO</div><h2>Conoce a Francisco Núñez Cáceres</h2><div className="content-panel"><p>El Dr. Francisco Núñez Cáceres presenta su candidatura a la Presidencia del Colegio de Abogados de la República Dominicana para el período 2026–2029, bajo los principios de transparencia, moralidad y justicia.</p><p>Su biografía académica, profesional y gremial detallada se incorporará con información biográfica comprobada.</p></div></section>
@@ -32,5 +38,5 @@ export default function Home() {
  <section className="section content-section" id="noticias"><div className="section-kicker">ACTUALIDAD</div><h2>Noticias y comunicados</h2><div className="empty-state"><strong>Información de la candidatura</strong><p>Este espacio incluirá comunicados, fotografías y vídeos verificados de las actividades públicas.</p></div></section>
  <section className="section content-section" id="participa"><div className="section-kicker">PARTICIPA</div><h2>Forma parte de la conversación</h2><div className="content-panel"><p>Próximamente estarán disponibles el registro voluntario de colaboradores y los canales oficiales de contacto. Ningún registro se realizará sin explicar su finalidad y solicitar el consentimiento correspondiente.</p></div></section>
  <footer><strong>NÚÑEZ CARD 2026</strong><span>Transparencia · Moralidad · Justicia</span><small>Plataforma de la candidatura · Alcance nacional</small></footer>
- </main>
+ </main></>
 }
