@@ -59,3 +59,21 @@
  .hero{padding:51px 18px 60px}
 }
 @media(min-width:520px) and (max-width:850px){.quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Participación: diseño institucional coherente con la portada */
+.participa-page{min-height:100vh;background:#eef3f9;color:#183252}
+.participa-top{padding:18px 6%;background:#091d3a}.participa-top a{color:white;font-weight:850;letter-spacing:.035em}
+.participa-hero{padding:55px max(5%,20px) 45px;text-align:center;color:#fff;background:linear-gradient(135deg,#06152e,#1d4c80 57%,#10284d)}
+.participa-hero>span{font-weight:850;letter-spacing:.13em;font-size:.77rem;color:#e9c99d}
+.participa-hero h1{font-size:clamp(2.4rem,7vw,4.8rem);margin:16px 0}.participa-hero p{max-width:650px;margin:0 auto 25px;line-height:1.6;color:#ecf2fa}
+.participa-share{display:flex;flex-wrap:wrap;gap:15px;justify-content:center}
+.participa-share button,.participa-share a,.participa-submit{border:1px solid #d1deef;border-radius:14px;background:linear-gradient(#fff,#d5e4f5);color:#16365d;font:inherit;font-weight:850;padding:15px 20px;cursor:pointer;box-shadow:0 5px 0 #0b294c,0 9px 17px #00152e38}
+.participa-share button:active,.participa-share a:active,.participa-submit:active{transform:translateY(4px);box-shadow:0 1px 0 #0b294c}
+.participa-content{max-width:780px;margin:0 auto;padding:38px 18px 70px}.participa-content h2{font-size:2rem;margin:0 0 12px}.participa-content>p{line-height:1.6;color:#52627a}
+.participa-form{display:grid;gap:17px;background:white;border:1px solid #d1deee;padding:clamp(18px,5vw,32px);border-radius:20px;box-shadow:0 9px 25px #17365e16}
+.participa-form>label:not(.participa-check){display:grid;gap:8px;font-weight:800}
+.participa-form input:not([type=checkbox]),.participa-form textarea{width:100%;border:1px solid #afc0d8;border-radius:10px;padding:13px;color:#173354;font:inherit;background:#fff}
+.participa-form input:focus,.participa-form textarea:focus{outline:3px solid #8ebae5;outline-offset:1px}
+.participa-check{display:flex;align-items:flex-start;gap:11px;font-weight:600;line-height:1.45}.participa-check input{width:22px;height:22px;flex:none;accent-color:#204f88;margin:1px}
+.participa-disclaimer{font-size:.85rem;color:#546780;line-height:1.5;margin:2px 0}.participa-submit{width:100%;box-shadow:0 5px 0 #7493b8}
+@media(max-width:550px){.participa-hero{padding:42px 18px}.participa-share button,.participa-share a{width:100%;text-align:center;justify-content:center}}
