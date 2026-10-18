@@ -23,7 +23,7 @@ const shortcuts = [
 export default function Home() {
  const [showIntro,setShowIntro] = useState(true);
 
- useEffect(() => { const t=window.setTimeout(()=>setShowIntro(false),3500); return ()=>window.clearTimeout(t); },[]);
+ useEffect(() => { const t=window.setTimeout(()=>setShowIntro(false),5900); return ()=>window.clearTimeout(t); },[]);
 
  return <><main>
  {showIntro && <div className="intro-overlay" role="dialog" aria-label="Presentación del Movimiento Gremial CARD 2026"><img className="intro-logo" src="/emblema-card-3d.webp" alt="Movimiento Gremial CARD 2026 - Integridad Jurídica"/><span className="intro-label">MOVIMIENTO GREMIAL CARD 2026</span><button className="intro-skip" type="button" onClick={()=>setShowIntro(false)}>Omitir presentación</button></div>}
