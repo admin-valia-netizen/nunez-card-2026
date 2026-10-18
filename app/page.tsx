@@ -1,149 +1,34 @@
 const programAreas = [
-  "Defensa del ejercicio profesional",
-  "Servicios al colegiado",
-  "Modernización digital",
-  "Transparencia institucional",
-  "Formación y actualización profesional",
-  "Abogado joven",
-  "Seccionales y presencia nacional",
-  "Participación permanente del gremio",
+  {title:"Transparencia y rendición de cuentas",points:["Auditoría financiera y patrimonial de los últimos diez años de gestión, con garantías legales.","Publicación periódica de presupuestos, estados financieros y ejecución de recursos.","Controles internos, supervisión y un portal de transparencia institucional."]},
+  {title:"Defensa y dignidad del abogado",points:["Oficina Nacional de Atención y Defensa del Colegiado, con seguimiento de reclamaciones.","Observatorio del Ejercicio Profesional y promoción del respeto institucional.","Estudio de la figura del Defensor del Abogado y defensa de honorarios justos."]},
+  {title:"Seguridad social, salud y bienestar",points:["Fondo de Solidaridad para colegiados en situaciones de vulnerabilidad.","Estudio de una Pensión Solidaria para abogados retirados sin recursos suficientes.","Convenios médicos, medicamentos y ayudas extraordinarias por enfermedad, incapacidad o fallecimiento.","Prestaciones sujetas a requisitos, financiación y sostenibilidad."]},
+  {title:"Modernización tecnológica nacional",points:["Sede electrónica para trámites, certificaciones, consultas y actualización de datos.","Carné digital verificable, expediente protegido y pagos electrónicos.","Biblioteca jurídica, escuela virtual y servicios de las seccionales conectados nacionalmente.","Ciberseguridad, protección de datos y asistente virtual de orientación."]},
+  {title:"Formación y capacitación profesional",points:["Instituto Nacional de Formación y Escuela Virtual del Abogado.","Capacitación jurídica práctica, cursos gratuitos financiados y becas.","Convenios universitarios, formación en derecho digital, inteligencia artificial y nuevas tecnologías.","Red nacional de mentoría profesional y evaluación de la calidad educativa."]},
+  {title:"Oportunidades laborales y desarrollo profesional",points:["Bolsa Nacional de Empleo Jurídico y orientación para la inserción laboral.","Apoyo tecnológico y administrativo a despachos independientes y nuevos emprendimientos.","Red de colaboración profesional y directorio voluntario de servicios jurídicos.","Programas de servicios jurídicos remunerados con selección transparente."]},
+  {title:"Fortalecimiento de las seccionales",points:["Descentralización de servicios y trámites disponibles en todo el territorio nacional.","Recursos y capacidades administrativas distribuidos conforme a criterios objetivos.","Participación de las seccionales y estudio de un mecanismo nacional de coordinación.","Mismos estándares de atención para todos los colegiados."]},
+  {title:"Apoyo a los abogados jóvenes",points:["Programa de primer empleo jurídico y oportunidades profesionales remuneradas.","Mentoría con profesionales experimentados y capacitación práctica.","Becas, apoyo al primer despacho y participación gremial juvenil."]},
+  {title:"Asistencia jurídica y compromiso social",points:["Orientación y asistencia jurídica para ciudadanos de escasos recursos.","Jornadas nacionales de información sobre derechos y procedimientos.","Atención a personas en situación de vulnerabilidad mediante convenios.","Remuneración de profesionales participantes cuando existan fondos y reglas objetivas."]},
+  {title:"Participación gremial y comunicación directa",points:["Núñez te Escucha como canal de propuestas, consultas y reclamaciones.","Consultas gremiales conforme a las normas institucionales.","Participación de las seccionales, información pública y seguimiento de solicitudes.","Informes periódicos sobre resultados y cumplimiento de iniciativas."]}
 ];
-
+const shortcuts = [
+  ["Conoce a Núñez","Perfil y trayectoria","#perfil"],
+  ["Programa","Diez ejes de propuestas","#programa"],
+  ["Núñez te escucha","Opiniones y propuestas","#escucha"],
+  ["Agenda","Encuentros y actividades","#agenda"],
+  ["Noticias","Comunicados y novedades","#noticias"],
+  ["Participa","Colabora e infórmate","#participa"]
+];
 export default function Home() {
-  return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#inicio">NÚÑEZ CARD 2026</a>
-        <nav aria-label="Navegación principal">
-          <a href="#programa">Programa</a>
-          <a href="#escucha">Te escucha</a>
-          <a href="#agenda">Agenda</a>
-          <a href="#noticias">Noticias</a>
-        </nav>
-      </header>
-
-      <section className="hero" id="inicio">
-        <div className="hero-inner">
-          <div className="identity-slot" aria-label="Espacio reservado para el logotipo oficial">
-            <span>LOGOTIPO OFICIAL</span>
-            <small>pendiente de incorporación</small>
-          </div>
-
-          <div className="topline">NÚÑEZ CARD 2026</div>
-          <p className="eyebrow">Candidatura a la Presidencia del Colegio de Abogados de la República Dominicana</p>
-          <h1>Dr. Francisco Núñez Cáceres</h1>
-          <p className="term">Presidente 2026–2029</p>
-          <p className="motto">Transparencia · Moralidad · Justicia</p>
-
-          <div className="actions">
-            <a href="#programa" className="primary">Conoce el programa</a>
-            <a href="#escucha" className="secondary">Núñez te escucha</a>
-          </div>
-        </div>
-      </section>
-
-      <section className="section intro">
-        <div className="section-heading">
-          <span>PLATAFORMA DIGITAL</span>
-          <h2>Información directa, participación y comunicación con el gremio.</h2>
-        </div>
-        <div className="quick-grid">
-          <a className="quick-card" href="#perfil"><strong>Conoce a Núñez</strong><span>Perfil y trayectoria</span></a>
-          <a className="quick-card" href="#programa"><strong>Programa</strong><span>Propuestas por áreas</span></a>
-          <a className="quick-card" href="#escucha"><strong>Núñez te escucha</strong><span>Ideas y propuestas</span></a>
-          <a className="quick-card" href="#agenda"><strong>Agenda</strong><span>Encuentros y actividades</span></a>
-          <a className="quick-card" href="#noticias"><strong>Noticias</strong><span>Comunicados y novedades</span></a>
-          <a className="quick-card" href="#participa"><strong>Participa</strong><span>Colabora e infórmate</span></a>
-        </div>
-      </section>
-
-      <section className="section content-section" id="perfil">
-        <div className="section-kicker">CANDIDATO</div>
-        <h2>Conoce a Francisco Núñez Cáceres</h2>
-        <div className="content-panel pending">
-          <p>La biografía, trayectoria profesional y experiencia gremial se incorporarán aquí cuando recibamos el contenido oficial confirmado.</p>
-        </div>
-      </section>
-
-      <section className="section content-section" id="programa">
-        <div className="section-kicker">PROGRAMA 2026–2029</div>
-        <h2>Propuestas organizadas para una consulta rápida.</h2>
-        <p className="section-copy">La plataforma queda preparada para publicar el programa oficial por áreas, sin obligar al abogado a descargar un documento extenso.</p>
-        <div className="program-grid">
-          {programAreas.map((area, index) => (
-            <article className="program-card" key={area}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{area}</h3>
-              <p>Contenido oficial pendiente de incorporación.</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section content-section" id="escucha">
-        <div className="section-kicker">PARTICIPACIÓN</div>
-        <h2>Núñez te escucha</h2>
-        <p className="section-copy">Canal para que los abogados compartan problemas, ideas y propuestas relacionadas con el CARD.</p>
-        <form className="listen-form">
-          <div className="field-row">
-            <label>Nombre
-              <input type="text" name="nombre" placeholder="Nombre y apellido" />
-            </label>
-            <label>Provincia
-              <input type="text" name="provincia" placeholder="Provincia" />
-            </label>
-          </div>
-          <label>Correo o teléfono <small>(opcional)</small>
-            <input type="text" name="contacto" placeholder="Para poder responderte" />
-          </label>
-          <label>¿Cuál es el principal problema que debería atender el CARD?
-            <textarea name="problema" rows={4} placeholder="Escribe aquí tu opinión" />
-          </label>
-          <label>Tu propuesta
-            <textarea name="propuesta" rows={5} placeholder="Comparte una idea o solución" />
-          </label>
-          <button className="form-button" type="button" disabled>Envío disponible al conectar Supabase</button>
-          <p className="form-note">No se guardará ningún dato hasta activar el backend y la política de privacidad.</p>
-        </form>
-      </section>
-
-      <section className="section content-section" id="agenda">
-        <div className="section-kicker">AGENDA</div>
-        <h2>Encuentros y actividades</h2>
-        <div className="empty-state">
-          <strong>Agenda preparada.</strong>
-          <p>Los próximos encuentros, reuniones y convocatorias aparecerán aquí con fecha, lugar y opción de confirmar participación.</p>
-        </div>
-      </section>
-
-      <section className="section content-section" id="noticias">
-        <div className="section-kicker">ACTUALIDAD</div>
-        <h2>Noticias y comunicados</h2>
-        <div className="empty-state">
-          <strong>Canal de publicaciones preparado.</strong>
-          <p>Podremos publicar comunicados, vídeos, fotografías y novedades de la candidatura desde el panel de administración.</p>
-        </div>
-      </section>
-
-      <section className="section content-section" id="participa">
-        <div className="section-kicker">PARTICIPA</div>
-        <h2>Mantente conectado</h2>
-        <div className="content-panel">
-          <p>Esta sección quedará vinculada a los canales oficiales de la candidatura, al grupo profesional de LinkedIn y a las herramientas de contacto cuando estén confirmadas.</p>
-        </div>
-      </section>
-
-      <section className="section compact">
-        <div className="notice">
-          <strong>Versión inicial funcional.</strong>
-          <p>La estructura, navegación y módulos principales ya están definidos. El logotipo, programa, biografía y demás contenidos oficiales se incorporarán únicamente cuando sean entregados o confirmados.</p>
-        </div>
-      </section>
-
-      <footer>
-        <strong>NÚÑEZ CARD 2026</strong>
-        <span>Transparencia · Moralidad · Justicia</span>
-      </footer>
-    </main>
-  );
+ return <main>
+ <header className="site-header"><a className="brand" href="#inicio"><span className="brand-mark">N</span><span>NÚÑEZ <b>CARD 2026</b></span></a><nav aria-label="Navegación principal"><a href="#programa">Programa</a><a href="#escucha">Te escucha</a><a href="#agenda">Agenda</a><a href="#noticias">Noticias</a></nav></header>
+ <section className="hero" id="inicio"><div className="hero-inner"><div className="topline">COLEGIO DE ABOGADOS DE LA REPÚBLICA DOMINICANA</div><p className="eyebrow">Candidatura a la Presidencia · Período 2026–2029</p><h1>Dr. Francisco<br/><em>Núñez Cáceres</em></h1><p className="term">Programa de desarrollo institucional de alcance nacional</p><p className="motto">TRANSPARENCIA · MORALIDAD · JUSTICIA</p><div className="actions"><a href="#programa" className="primary">Explorar el programa <span aria-hidden="true">↗</span></a><a href="#escucha" className="secondary">Núñez te escucha <span aria-hidden="true">→</span></a></div></div></section>
+ <section className="section intro"><div className="section-heading"><span>PLATAFORMA DIGITAL</span><h2>Un espacio para conocer las propuestas y participar.</h2></div><div className="quick-grid">{shortcuts.map(([title,detail,href],i)=><a className="quick-card relief" href={href} key={title}><span className="quick-icon">{["◆","▤","◉","◷","✦","✓"][i]}</span><strong>{title}</strong><span>{detail}</span><span className="quick-arrow">↗</span></a>)}</div></section>
+ <section className="section content-section" id="perfil"><div className="section-kicker">CANDIDATO</div><h2>Conoce a Francisco Núñez Cáceres</h2><div className="content-panel"><p>El Dr. Francisco Núñez Cáceres presenta su candidatura a la Presidencia del Colegio de Abogados de la República Dominicana para el período 2026–2029, bajo los principios de transparencia, moralidad y justicia.</p><p>Su biografía académica, profesional y gremial detallada se incorporará con información biográfica comprobada.</p></div></section>
+ <section className="section content-section" id="programa"><div className="section-kicker">PROGRAMA ELECTORAL 2026–2029</div><h2>Diez ejes de actuación para todo el país.</h2><p className="section-copy">Propuestas de modernización, protección social y desarrollo profesional para los abogados de toda la República Dominicana. Las medidas que requieren financiación o cambios institucionales se someterán a los estudios y aprobaciones correspondientes.</p><div className="program-grid">{programAreas.map((area,index)=><details className="program-card" key={area.title} open={index===0}><summary><span className="program-number">{String(index+1).padStart(2,"0")}</span><strong>{area.title}</strong><span className="program-toggle" aria-hidden="true">＋</span></summary><div className="program-body"><ul>{area.points.map(point=><li key={point}>{point}</li>)}</ul></div></details>)}</div></section>
+ <section className="section content-section" id="escucha"><div className="section-kicker">PARTICIPACIÓN</div><h2>Núñez te escucha</h2><p className="section-copy">Un canal para conocer inquietudes, propuestas y prioridades de los profesionales del derecho.</p><div className="content-panel"><p>Estamos preparando la recepción segura de mensajes, con consentimiento, medidas de protección de datos y seguimiento de solicitudes. El formulario se activará cuando exista un destino de recepción verificado.</p><a href="#participa" className="inline-action relief">Ver opciones de participación →</a></div></section>
+ <section className="section content-section" id="agenda"><div className="section-kicker">AGENDA</div><h2>Encuentros y actividades</h2><div className="empty-state"><strong>Próximas convocatorias</strong><p>Publicaremos las actividades confirmadas con su fecha, ubicación y detalles de participación.</p></div></section>
+ <section className="section content-section" id="noticias"><div className="section-kicker">ACTUALIDAD</div><h2>Noticias y comunicados</h2><div className="empty-state"><strong>Información de la candidatura</strong><p>Este espacio incluirá comunicados, fotografías y vídeos verificados de las actividades públicas.</p></div></section>
+ <section className="section content-section" id="participa"><div className="section-kicker">PARTICIPA</div><h2>Forma parte de la conversación</h2><div className="content-panel"><p>Próximamente estarán disponibles el registro voluntario de colaboradores y los canales oficiales de contacto. Ningún registro se realizará sin explicar su finalidad y solicitar el consentimiento correspondiente.</p></div></section>
+ <footer><strong>NÚÑEZ CARD 2026</strong><span>Transparencia · Moralidad · Justicia</span><small>Plataforma de la candidatura · Alcance nacional</small></footer>
+ </main>
 }
